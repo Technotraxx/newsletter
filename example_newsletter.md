@@ -85,4 +85,4 @@ Nutzen Sie das herrliche Wetter für einen Besuch im Englischen Garten - beim ko
 
 *Bleiben Sie informiert und genießen Sie Ihren Sonntag in München!*
 
-**Ihr Merkur.de Team**
+**Ihr München News Team**
