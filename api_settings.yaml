@@ -1,0 +1,39 @@
+claude:
+  max_tokens: 2000
+  model: claude-3-5-haiku-latest
+  web_search:
+    max_uses: 5
+    user_location:
+      country: DE
+      timezone: Europe/Berlin
+      type: approximate
+firecrawl:
+  default_formats:
+  - markdown
+  - links
+  location:
+    country: DE
+    languages:
+    - de-DE
+  scrape_timeout: 30000
+  search_limits:
+    default: 5
+    events: 5
+    verkehr: 4
+    wetter: 3
+gemini:
+  max_output_tokens: 2000
+  model: gemini-2.5-flash
+  temperature: 0.3
+perplexity:
+  extra_body:
+    return_images: false
+    return_related_questions: false
+    search_mode: web
+    web_search_options:
+      search_context_size: medium
+      user_location:
+        country: DE
+  model: sonar-pro
+  temperature: 0.2
+  top_p: 0.9

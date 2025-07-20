@@ -1,0 +1,126 @@
+events:
+  description: Lokale Veranstaltungen, Konzerte, Kultur
+  keywords:
+  - Event
+  - Konzert
+  - Ausstellung
+  - Theater
+  - Festival
+  priority: medium
+  scrape_urls:
+  - https://www.{location_slug}.de/veranstaltungen
+  - https://www.eventbrite.de/d/germany--{location_slug}/events/
+  search_templates:
+    claude_web: Veranstaltungen Events {location} {date_context} heute morgen
+    firecrawl_search: Veranstaltungen {location} heute Events
+    perplexity: Events Konzerte Ausstellungen {location} {date_context}
+  time_sensitivity: today_tomorrow
+nachrichten:
+  description: Lokale Nachrichten und wichtige Meldungen
+  keywords:
+  - Nachrichten
+  - News
+  - Meldung
+  - aktuell
+  - lokal
+  priority: high
+  scrape_urls:
+  - https://www.{location_slug}.de/aktuelles
+  - https://www.sueddeutsche.de/{location_slug}
+  search_templates:
+    claude_web: lokale Nachrichten {location} {date_context} heute aktuell
+    firecrawl_search: '{location} Nachrichten heute lokal'
+    perplexity: '{location} News Nachrichten lokal {date_context}'
+  time_sensitivity: today
+rathaus:
+  description: Offizielle Mitteilungen der Stadtverwaltung
+  keywords:
+  - Rathaus
+  - Stadtverwaltung
+  - Bekanntmachung
+  - Mitteilung
+  primary_method: scrape
+  priority: medium
+  scrape_urls:
+  - https://www.{location_slug}.de/rathaus
+  - https://www.{location_slug}.de/aktuelles
+  - https://www.stadt-{location_slug}.de
+  search_templates:
+    claude_web: Rathaus {location} Mitteilungen Bekanntmachungen {date_context}
+    firecrawl_search: Rathaus {location} Mitteilungen heute
+    perplexity: '{location} Stadtverwaltung Rathaus Mitteilungen {date_context}'
+  time_sensitivity: today
+schulen:
+  description: Schulnachrichten und Bildungsinfos
+  keywords:
+  - Schule
+  - Bildung
+  - Unterricht
+  - Mitteilung
+  priority: low
+  search_templates:
+    claude_web: Schulen {location} Mitteilungen Unterrichtsausfall {date_context}
+    firecrawl_search: Schulen {location} Mitteilungen
+    perplexity: '{location} Schulnachrichten Bildung {date_context}'
+  time_sensitivity: today
+sport:
+  description: Lokale Sportergebnisse und Sportveranstaltungen
+  keywords:
+  - Sport
+  - Spiel
+  - Ergebnis
+  - Verein
+  - Mannschaft
+  priority: medium
+  search_templates:
+    claude_web: '{location} Sport Ergebnisse Spiele {date_context} lokal'
+    firecrawl_search: '{location} Sport heute Ergebnisse'
+    perplexity: Sport {location} Ergebnisse Vereine {date_context}
+  time_sensitivity: today
+vereine:
+  description: Vereinsaktivitäten und lokale Gemeinschaft
+  keywords:
+  - Verein
+  - Gemeinschaft
+  - Aktivität
+  - Termin
+  priority: low
+  search_templates:
+    claude_web: Vereine {location} Aktivitäten Termine {date_context}
+    firecrawl_search: Vereine {location} Termine heute
+    perplexity: '{location} Vereine Events Aktivitäten {date_context}'
+  time_sensitivity: today_tomorrow
+verkehr:
+  description: Aktuelle Verkehrslage, Störungen und ÖPNV-Infos
+  fallback_urls:
+  - https://www.verkehr.nrw/verkehrslage/{location_slug}
+  - https://www.adac.de/verkehr/verkehrsinformationen/
+  keywords:
+  - Verkehr
+  - Stau
+  - ÖPNV
+  - Störung
+  - Umleitung
+  priority: high
+  search_templates:
+    claude_web: Verkehrslage {location} aktuell Störungen Staus {date_context}
+    firecrawl_search: Verkehr {location} Störungen aktuell
+    perplexity: aktuelle Verkehrsstörungen {location} ÖPNV Staus {date_context}
+  time_sensitivity: current
+wetter:
+  description: Aktuelle Wettervorhersage und Wetterwarnungen
+  fallback_urls:
+  - https://www.wetter.com/deutschland/{location_slug}
+  - https://www.wetteronline.de/wetter/{location_slug}
+  keywords:
+  - Wetter
+  - Temperatur
+  - Regen
+  - Sonne
+  - Vorhersage
+  priority: high
+  search_templates:
+    claude_web: aktuelles Wetter {location} heute {date_context} Deutschland Vorhersage
+    firecrawl_search: Wetter {location} heute Vorhersage Deutschland
+    perplexity: Wetter Vorhersage {location} {date_context} Deutschland aktuell
+  time_sensitivity: today

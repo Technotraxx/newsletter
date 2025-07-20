@@ -1,0 +1,36 @@
+berlin:
+  official_domains:
+  - berlin.de
+  - bvg.de
+  official_names:
+  - Berlin
+  population: 3700000
+  region_context: Deutschland Hauptstadt
+  timezone: Europe/Berlin
+  type: hauptstadt
+  url_slug: berlin
+hamburg:
+  official_domains:
+  - hamburg.de
+  - hvv.de
+  official_names:
+  - Hamburg
+  population: 1900000
+  region_context: Norddeutschland
+  timezone: Europe/Berlin
+  type: hansestadt
+  url_slug: hamburg
+münchen:
+  official_domains:
+  - muenchen.de
+  - stadtwerke-muenchen.de
+  - mvg.de
+  official_names:
+  - München
+  - Munich
+  - Muenchen
+  population: 1500000
+  region_context: Bayern Deutschland
+  timezone: Europe/Berlin
+  type: landeshauptstadt
+  url_slug: muenchen
